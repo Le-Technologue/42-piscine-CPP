@@ -1,0 +1,12 @@
+.DS_Store
+a.out*
+*.sw*
+*.o
+*.a
+*.d
+*.vim
+todo.md
+tags
+minishell
+jaune
+marron
