@@ -6,7 +6,7 @@
 /*   By: wetieven <wetieven@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 16:16:06 by wetieven          #+#    #+#             */
-/*   Updated: 2022/03/10 18:21:56 by wetieven         ###   ########lyon.fr   */
+/*   Updated: 2022/03/11 16:31:34 by wetieven         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,15 @@ int main( void )
 {
 	PhoneBook	directory;
 	std::string	input;
-	int			key;
 
 	do {
-		std::cout << "ADD contacts, SEARCH them or EXIT" << std::endl;
+		std::cout << "\nADD contacts, SEARCH them or EXIT" << std::endl;
 		getline(std::cin, input);
 		if (input == "ADD")
-			directory.addContact //gnagna
+			directory.addContact(Contact::fetch_contact());
 		else if (input == "SEARCH")
-		{
-		}
+			directory.searchBook();
 		else if (input == "EXIT")
 			break ;
-	} while (input)
+	} while (!std::cin.eof() && input.size());
 }

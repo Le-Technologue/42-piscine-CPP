@@ -6,10 +6,11 @@
 /*   By: wetieven <wetieven@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 21:41:16 by wetieven          #+#    #+#             */
-/*   Updated: 2022/03/10 21:41:21 by wetieven         ###   ########lyon.fr   */
+/*   Updated: 2022/03/11 13:29:02 by wetieven         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <cstdlib>
 #include "Contact.hpp"
 
 Contact::Contact( void ) {}

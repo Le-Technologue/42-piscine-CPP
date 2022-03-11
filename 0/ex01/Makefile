@@ -6,7 +6,7 @@
 #    By: wetieven <wetieven@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/27 13:50:48 by wetieven          #+#    #+#              #
-#    Updated: 2022/03/10 21:07:44 by wetieven         ###   ########lyon.fr    #
+#    Updated: 2022/03/11 16:53:13 by wetieven         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 # === TARGETS === #
 # =============== #
 
-NAME		=	ephemeral_directory
+NAME		=	lame_ephemeral_directory
 
 ## ~~ Folders ~~ ##
 
@@ -27,10 +27,10 @@ ODIR		=	objs/
 
 ESRC		=	main.cpp
 
-CSRC		=	Contact.tpp \
-				PhoneBook.tpp
+CSRC		=	Contact.cpp \
+				PhoneBook.cpp
 
-TSRC		=	
+# TSRC		=	
 
 ## ~~ Folders ~~ ##
 
@@ -41,15 +41,20 @@ SDIR		=	srcs/
 # === PLACEHOLDERS === #
 # ==================== #
 
+### ~~~ SOURCES ~~~ ###
+
+SRCS		=	$(ESRC) $(CSRC)#$(TSRC)
+
 ### ~~~ TARGETS ~~~ ###
 
-EOBJ		=	$(ESRC:%.cpp=$(ODIR)%.o)
-COBJ		=	$(ESRC:%.cpp=$(ODIR)%.o)
-TOBJ		=	$(TSRC:%.tpp=$(ODIR)%.o)
+# EOBJ		=	$(ESRC:%.cpp=$(ODIR)%.o)
+# COBJ		=	$(CSRC:%.cpp=$(ODIR)%.o)
+# TOBJ		=	$(TSRC:%.tpp=$(ODIR)%.o)
 
-OBJS		=	$(TOBJ) $(COBJ) $(EOBJ)
+# OBJS		=	$(EOBJ) $(COBJ)#$(TOBJ)
+OBJS		=	$(SRCS:%.cpp=$(ODIR)%.o)
 
-DEPS		=	$(SRCS:%=$(DDIR)%.d)
+DEPS		=	$(SRCS:%.cpp=$(DDIR)%.d)
 
 ## ~~ Folders ~~ ##
 
@@ -62,7 +67,7 @@ SUBDIRS		=	$(ODIR) $(DDIR)
 ### ~~~ SOURCES ~~~ ###
 
 vpath %.hpp $(HDIR)
-vpath %.tpp $(SDIR)
+# vpath %.tpp $(SDIR)
 vpath %.cpp $(SDIR)
 
 ### ~~~ TARGETS ~~~ ###
@@ -73,10 +78,13 @@ vpath %.o $(ODIR)
 # === COMPILER SETUP === #
 # ====================== #
 
-CC			=	clang++
+CC			=	g++
+
 WRNFL		=	-std=c++98 -Wall -Wextra -Werror
 DBGFL		=	-g
-CFLGS		=	$(WRNFL)#$(DBGFL)
+CINCS		=	$(addprefix -I, $(HDIR))
+CFLGS		=	$(WRNFL) $(DBGFL)
+
 DEPFL		=	-MT $@ -MMD -MP -MF $(DDIR)$*.d
 
 # ============= #
