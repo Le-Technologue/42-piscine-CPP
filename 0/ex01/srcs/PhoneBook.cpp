@@ -6,7 +6,7 @@
 /*   By: wetieven <wetieven@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 21:52:04 by wetieven          #+#    #+#             */
-/*   Updated: 2022/03/11 16:59:09 by wetieven         ###   ########lyon.fr   */
+/*   Updated: 2022/03/11 17:06:53 by wetieven         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static void	showEntry( std::string str )
 		str = str.insert(0, COL_WIDTH - entry_width, ' ');
 	else if (entry_width > COL_WIDTH)
 	{
-		str.resize(COL_WIDTH);
+		str.resize(COL_WIDTH - 1);
 		str += ".";
 	}
 	std::cout << str;
