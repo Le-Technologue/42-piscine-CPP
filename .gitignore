@@ -6,7 +6,5 @@ a.out*
 *.d
 *.vim
 todo.md
+test
 tags
-minishell
-jaune
-marron

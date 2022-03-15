@@ -6,7 +6,7 @@
 #    By: wetieven <wetieven@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/27 13:50:48 by wetieven          #+#    #+#              #
-#    Updated: 2022/03/15 11:06:08 by wetieven         ###   ########lyon.fr    #
+#    Updated: 2022/03/15 11:06:00 by wetieven         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 # === TARGETS === #
 # =============== #
 
-NAME		=	# EXEC NAME
+NAME		=	test
 
 ## ~~ Folders ~~ ##
 
@@ -25,9 +25,11 @@ ODIR		=	objs/
 # === SOURCES === #
 # =============== #
 
-ESRC		=	# EXEC SOURCES
+ESRC		=	main.cpp
 
-CSRC		=	# CLASS SOURCES
+CSRC		=	Zombie.cpp \
+				newZombie.cpp \
+				randomChump.cpp
 
 TSRC		=	# TEMPLATES SOURCES
 
@@ -77,7 +79,7 @@ vpath %.o $(ODIR)
 # === COMPILER SETUP === #
 # ====================== #
 
-CC			=	clang++
+CC			=	g++
 WRNFL		=	-std=c++98 -Wall -Wextra -Werror
 DBGFL		=	-g
 CINCS		=	$(addprefix -I, $(HDIR))
