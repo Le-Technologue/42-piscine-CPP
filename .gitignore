@@ -7,6 +7,5 @@ a.out*
 *.vim
 todo.md
 out_test
-ref
 test
 tags
