@@ -11,16 +11,16 @@ private :
 public :
 
 	Fixed( void );
-	Fixed( int value );
-	Fixed( float value );
+	Fixed( int const value );
+	Fixed( float const value );
 	Fixed( Fixed const & src );
 	~Fixed( void );
 
 	int		getRawBits( void ) const;
 	void	setRawBits( int raw );
 
-	int		toInt(void) const;
-	float	toFloat(void) const;
+	int		toInt( void ) const;
+	float	toFloat( void ) const;
 
 	Fixed &	operator=( Fixed const & rhs );
 };
