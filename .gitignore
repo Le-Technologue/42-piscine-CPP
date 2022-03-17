@@ -6,5 +6,6 @@ a.out*
 *.d
 *.vim
 todo.md
+out_test
 test
 tags
