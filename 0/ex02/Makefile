@@ -6,7 +6,7 @@
 #    By: wetieven <wetieven@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/27 13:50:48 by wetieven          #+#    #+#              #
-#    Updated: 2022/03/18 03:36:34 by wetieven         ###   ########lyon.fr    #
+#    Updated: 2022/03/18 03:30:38 by wetieven         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 # === TARGETS === #
 # =============== #
 
-NAME		=	# EXEC NAME
+NAME		=	test
 
 ## ~~ Folders ~~ ##
 
@@ -25,9 +25,9 @@ ODIR		=	objs/
 # === SOURCES === #
 # =============== #
 
-ESRC		=	# EXEC SOURCES
+ESRC		=	tests.cpp
 
-CSRC		=	# CLASS SOURCES
+CSRC		=	Account.cpp
 
 TSRC		=	# TEMPLATES SOURCES
 
