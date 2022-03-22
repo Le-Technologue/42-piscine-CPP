@@ -2,26 +2,6 @@
 #include <iostream>
 #include "Account.hpp"
 
-/* Account::Account( void ) { */
-/* 	return ; */
-/* }; */
-
-/* Account::Account( void ) : */
-
-/* 	_accountIndex(Account::_nbAccounts), */
-/* 	_totalAmount( 0 ), */
-/* 	_nbDeposits(0), */
-/* 	_nbWithdrawals(0) { */
-
-/* 	Account::_displayTimestamp(); */
-/* 	std::cout << "index:" << this->_accountIndex << ";amount:" << */ 
-/* 	this->_amount << ";created" << std::endl; */
-
-/* 	Account::_nbAccounts++; */
-
-/* 	return ; */
-/* }; */
-
 Account::Account( int initial_deposit ) :
 
 	_accountIndex(Account::_nbAccounts),
