@@ -6,7 +6,7 @@
 #    By: wetieven <wetieven@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/27 13:50:48 by wetieven          #+#    #+#              #
-#    Updated: 2022/03/16 20:54:59 by wetieven         ###   ########lyon.fr    #
+#    Updated: 2022/03/23 10:23:37 by wetieven         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -108,8 +108,6 @@ $(NAME)		:	$(OBJS)
 
 # ~~~ Actions ~~~ #
 
-bonus		:	all
-
 norm		:
 				norminette incs srcs
 
@@ -122,7 +120,7 @@ fclean		:	clean
 
 re			:	fclean all
 
-.PHONY : all norm clean fclean re#bonus
+.PHONY : all norm clean fclean re
 
 $(DEPS)		:
 include $(wildcard $(DEPS))
