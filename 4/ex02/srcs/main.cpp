@@ -7,7 +7,7 @@ int	main( void ) {
 
 	std::cout << "[ ~~~~~ SUBJECT TESTS ~~~~~ ]" << std::endl;
 
-	// Animal	test;
+	// Animal	test // <-- would result in a compilation error
 
 	std::cout << "\nconst Animal* j = new Dog();" << std::endl;
 	const Animal* j = new Dog();
