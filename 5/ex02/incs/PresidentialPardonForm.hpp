@@ -19,7 +19,7 @@ public:
 
 	PresidentialPardonForm( std::string target );
 	PresidentialPardonForm( PresidentialPardonForm const & copy );
-	~PresidentialPardonForm( void );
+	virtual ~PresidentialPardonForm( void );
 
 	PresidentialPardonForm&	operator=( PresidentialPardonForm const & rhs );
 };

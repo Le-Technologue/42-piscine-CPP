@@ -19,7 +19,7 @@ public:
 
 	RobotomyRequestForm( std::string target );
 	RobotomyRequestForm( RobotomyRequestForm const & copy );
-	~RobotomyRequestForm( void );
+	virtual ~RobotomyRequestForm( void );
 
 	RobotomyRequestForm&	operator=( RobotomyRequestForm const & rhs );
 };

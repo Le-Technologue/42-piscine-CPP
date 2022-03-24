@@ -27,7 +27,7 @@ public :
 	Form( const std::string name, const std::string target,
 		  size_t toSign, size_t toExec );
 	Form( Form const & src );
-	~Form( void );
+	virtual ~Form( void );
 
 	Form &	operator=( Form const & rhs );
 
