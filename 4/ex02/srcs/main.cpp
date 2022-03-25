@@ -119,5 +119,12 @@ int	main( void ) {
 	}
 	std::cout << std::endl;
 
+	std::cout << "delete cat;" << std::endl;
+	delete cat;
+	std::cout << std::endl;
+
+	std::cout << "delete copycat;" << std::endl;
+	delete copycat;
+
 	return 0;
 }
