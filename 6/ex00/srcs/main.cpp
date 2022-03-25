@@ -24,31 +24,11 @@ int	main( int ac, char *av[] )
 	std::stringstream	raw_ss(raw_str);
 	raw_ss >> dbl;
 
-	// Converting down to the smaller types
-	if (raw_str.size() == 1)
-	{
-		// Making an exception for properly converting single chars
-		chr = *av[1];
-		std::cout << chr << std::endl;
-	}
-	else
-	{
-		if ( dbl == 0 && *av[1] != '0' )
-		{
-			// Parsing...
-			std::cout << "Parsing isn't the point of this exercice:" <<
-			std::endl << "Could you at least TRY to input NUMBERS ?" <<
-			std::endl;
-			return 1;
-		}
-		chr = static_cast<char>( dbl );
-	}
-	flt = static_cast<float>( dbl );
-	itg = static_cast<int>( dbl );
-
 	// Testing stupid ass non existent math numbers even though that has no
 	// pedagogic interest here because the douche that made that subject
 	// is an elitist bully.
+	if ( raw_str.size() > 1 )
+	{
 	if ( raw_str == "nan" || raw_str == "nanf" )
 	{
 		std::cout << "chr: not a char" << std::endl;
@@ -89,6 +69,28 @@ int	main( int ac, char *av[] )
 		std::cout << "dbl: -inf" << std::endl;
 		return 0;
 	}
+	}
+
+	// Converting down to the smaller types
+	if (raw_str.size() == 1 && isalpha(*av[1]))
+	{
+		// Making an exception for properly converting single chars
+		chr = *av[1];
+	}
+	else
+	{
+		if ( dbl == 0 && *av[1] != '0' )
+		{
+			// Parsing...
+			std::cout << "Parsing isn't the point of this exercice:" <<
+			std::endl << "Could you at least TRY to input NUMBERS ?" <<
+			std::endl;
+			return 1;
+		}
+		chr = static_cast<char>( dbl );
+	}
+	flt = static_cast<float>( dbl );
+	itg = static_cast<int>( dbl );
 
 	// CHAR : boundary checks & display
 	if ( chr <= 31 || chr == 127 )
