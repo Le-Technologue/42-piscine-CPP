@@ -9,7 +9,11 @@ int main(void) {
 
 	std::cout << std::endl;
 
+	std::cout << "[ DIAMOND TRAP SPECIFIC FUNCTION TEST ]" << std::endl;
+	std::cout << ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" << std::endl;
+	std::cout << "\nfly.whoAmI();" << std::endl;
 	fly.whoAmI();
+	std::cout << "\ncow.whoAmI();" << std::endl;
 	cow.whoAmI();
 
 	std::cout << std::endl;

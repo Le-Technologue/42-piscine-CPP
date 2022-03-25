@@ -23,7 +23,7 @@ int main(void) {
 		std::cout << "\ncow.attack(\"an electric fence\");" << std::endl;
 		cow.attack("an electric fence");
 
-		std::cout << "\ncow.takeDamage(5);" << std::endl;
+		std::cout << "\ncow.takeDamage(2);" << std::endl;
 		cow.takeDamage(2);
 	}
 	std::cout << std::endl;
