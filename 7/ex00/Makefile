@@ -6,7 +6,7 @@
 #    By: wetieven <wetieven@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/27 13:50:48 by wetieven          #+#    #+#              #
-#    Updated: 2022/03/27 12:55:15 by wetieven         ###   ########lyon.fr    #
+#    Updated: 2022/03/27 13:23:43 by wetieven         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ ODIR		=	objs/
 
 ESRC		=	main.cpp
 
-CSRC		=	# CLASS SOURCES
+CSRC		=	Fixed.cpp
 
 TSRC		=	# TEMPLATES SOURCES
 
