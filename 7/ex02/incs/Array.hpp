@@ -23,7 +23,7 @@ public:
 		_data = new T[n];
 	}
 
-    Array( const Array & src )
+    Array( const Array & src ) : _data(NULL)
 	{
 		*this = src;
 	}
@@ -35,7 +35,8 @@ public:
 
 	Array &			operator=( const Array & rhs )
 	{
-		delete [] _data;
+		if (_data)
+			delete [] _data;
 
 		_size = rhs._size;
 		_data = new T[rhs._size];

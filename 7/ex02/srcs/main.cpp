@@ -4,12 +4,10 @@ int		main( void ) {
 
 	std::cout << "[ ~~~~~ CONSTRUCTING TWO ARRAYS ~~~~~ ]\n" << std::endl;
 	std::cout << "\"Array<int>	empty;\"" << std::endl;
-	std::cout << "v" << std::endl;
 	Array<int>	empty;
 	std::cout << std::endl;
 
 	std::cout << "\"Array<int>	quad(4);\"" << std::endl;
-	std::cout << "v" << std::endl;
 	Array<int>	quad(4);
 	std::cout << std::endl;
 
@@ -48,15 +46,14 @@ int		main( void ) {
 		std::cout << std::endl;
 	}
 
-	std::cout << "\n[ ~~~~~ COPY CONSTRUCTION ~~~~~ ]\n" << std::endl;
+	std::cout << "\n[ ~~~~~ DEEP COPY BY ASSIGNMENT OPERATOR ~~~~~ ]\n" <<
+	std::endl;
 	std::cout << "\"empty = quad;\"" << std::endl;
-	std::cout << "v" << std::endl;
 	empty = quad;
 	std::cout << std::endl;
 
 	std::cout << "\n[ ~~~~~ PROVING DEEP COPY ~~~~~ ]\n" << std::endl;
 	std::cout << "\"quad[0] = 666;\"" << std::endl;
-	std::cout << "v" << std::endl;
 	quad[0] = 666;
 	std::cout << std::endl;
 
@@ -79,6 +76,23 @@ int		main( void ) {
 		std::cout << "\"quad[i] = i;\"" << std::endl;
 		std::cout << "v" << std::endl;
 		std::cout << quad[i] << std::endl;
+	}
+
+	std::cout << "\n[ ~~~~~ COPY CONSTRUCTION ~~~~~ ]\n" << std::endl;
+
+	std::cout << "\"Array<int>	quad_copy(quad);\"" << std::endl;
+	Array<int>	quad_copy(quad);
+
+	std::cout << "\n[ ~~~~~ displaying \"quad_copy\" array ~~~~~ ]\n" <<
+	std::endl;
+	std::cout << "\"for ( unsigned int i = 0 ; i < quad_copy.size(); i++ )\"" <<
+	std::endl;
+	std::cout << "v" << std::endl;
+	for ( unsigned int i = 0 ; i < quad_copy.size(); i++ )
+	{
+		std::cout << "\"quad_copy[i] = i;\"" << std::endl;
+		std::cout << "v" << std::endl;
+		std::cout << quad_copy[i] << std::endl;
 	}
 
 	return 0;
