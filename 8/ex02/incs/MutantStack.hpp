@@ -14,6 +14,7 @@ public :
 
 	MutantStack & operator=(const MutantStack & rhs) {
 		std::stack<T>::operator=(rhs);
+		return *this;
 	}
 
 	typedef typename MutantStack::container_type::iterator iterator;
