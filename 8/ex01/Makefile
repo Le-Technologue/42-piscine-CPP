@@ -6,7 +6,7 @@
 #    By: wetieven <wetieven@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/27 13:50:48 by wetieven          #+#    #+#              #
-#    Updated: 2022/03/27 23:04:14 by wetieven         ###   ########lyon.fr    #
+#    Updated: 2022/03/28 09:50:58 by wetieven         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,7 +77,7 @@ vpath %.o $(ODIR)
 # === COMPILER SETUP === #
 # ====================== #
 
-CC			=	g++
+CC			=	clang++
 WRNFL		=	-Wall -Wextra -Werror -std=c++98
 DBGFL		=	-g
 CINCS		=	$(addprefix -I, $(HDIR))
