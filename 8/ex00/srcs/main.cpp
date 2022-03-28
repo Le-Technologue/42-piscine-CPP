@@ -7,14 +7,13 @@ int		main( void )
 {
 	std::cout << "[ ~~~~~ INITIALIZING VECTOR ~~~~~ ]\n" << std::endl;
 	std::cout << "\"std::vector<int>			vct;\"" << std::endl;
-	std::cout << "v" << std::endl;
 
 	std::vector<int>			vct;
 
 	std::cout << std::endl;
 
+	std::cout << "[ ~~~~~ INITIALIZING ITERATOR ~~~~~ ]\n" << std::endl;
 	std::cout << "\"std::vector<int>::iterator	it;\"" << std::endl;
-	std::cout << "v" << std::endl;
 
 	std::vector<int>::iterator	it;
 
