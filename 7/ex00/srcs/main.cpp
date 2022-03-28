@@ -2,8 +2,8 @@
 #include "whatever.hpp"
 #include "Fixed.hpp"
 
-// 54gcc from the next line to comment out the following scope
-int main() {
+// 54gcc from that main protoype to comment out its whole scope
+int main( void ) {
 
 	std::cout << "[ ~~~~~ SUBJECT TESTS ~~~~~ ]\n" << std::endl;
 
@@ -89,11 +89,27 @@ int main() {
 /* { */
 /* 	std::cout << "[ ~~~~~ CHECKLIST TESTS ~~~~~ ]\n" << std::endl; */
 
+/* 	std::cout << "\"Awesome a(2), b(4);\"" << std::endl; */
 /* 	Awesome a(2), b(4); */
+
+/* 	std::cout << std::endl; */
+/* 	std::cout << "\"swap(a, b);\"" << std::endl; */
 /* 	swap(a, b); */
 
+/* 	std::cout << std::endl; */
+/* 	std::cout << "\"std::cout << a << " " << b << std::endl;\"" << std::endl; */
+/* 	std::cout << "v" << std::endl; */
 /* 	std::cout << a << " " << b << std::endl; */
+
+/* 	std::cout << std::endl; */
+/* 	std::cout << "\"std::cout << max(a, b) << std::endl;\"" << std::endl; */
+/* 	std::cout << "v" << std::endl; */
 /* 	std::cout << max(a, b) << std::endl; */
+
+/* 	std::cout << std::endl; */
+/* 	std::cout << "\"std::cout << min(a, b) << std::endl;\"" << std::endl; */
+/* 	std::cout << "v" << std::endl; */
 /* 	std::cout << min(a, b) << std::endl; */
+
 /* 	return (0); */
 /* } */
