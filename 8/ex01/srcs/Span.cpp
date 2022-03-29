@@ -39,8 +39,8 @@ unsigned int	Span::shortestSpan( void ) const
 	std::vector<int>::const_iterator it = sorted.begin();
 	while ( ++it != sorted.end() )
 	{
-		if ( static_cast<unsigned int>(abs(*it - *(it - 1))) < span )
-			span = *it - *(it - 1);
+		if ( static_cast<unsigned int>(*it - *(it - 1)) < span )
+			span = static_cast<unsigned int>(*it - *(it - 1));
 	}
 	return span;
 }

@@ -5,6 +5,7 @@ int main ( void )
 {
 	std::cout << "[ ~~~~~ SUBJECT TESTS ~~~~~ ]\n" << std::endl;
 	{
+		std::cout << "Span sp = Span(5);" << std::endl;
 		Span sp = Span(5);
 
 		sp.addNumber(5);
@@ -13,13 +14,20 @@ int main ( void )
 		sp.addNumber(9);
 		sp.addNumber(11);
 
+		std::cout << std::endl;
 		std::cout << "\"sp.showSpan();\"" << std::endl;
 		std::cout << "v" << std::endl;
 
 		sp.showSpan();
 
 		std::cout << std::endl;
+		std::cout << "std::cout << sp.shortestSpan() << std::endl;" << std::endl;
+		std::cout << "v" << std::endl;
 		std::cout << sp.shortestSpan() << std::endl;
+
+		std::cout << std::endl;
+		std::cout << "std::cout << sp.longestSpan() << std::endl;" << std::endl;
+		std::cout << "v" << std::endl;
 		std::cout << sp.longestSpan() << std::endl;
 
 		std::cout << std::endl;
@@ -42,7 +50,6 @@ int main ( void )
 	std::cout << std::endl;
 	std::cout << "[ ~~~~~ RANDOM VALUES FILLS ~~~~~ ]\n" << std::endl;
 
-	std::cout << std::endl;
 	std::cout << "[ ~~~~~ 10 values ~~~~~ ]\n" << std::endl;
 	{
 		std::cout << "\"Span sp = Span(10);\"" << std::endl;
@@ -51,7 +58,6 @@ int main ( void )
 
 		std::cout << std::endl;
 		std::cout << "\"sp.randFill();\"" << std::endl;
-		std::cout << std::endl;
 
 		sp.randFill();
 
@@ -69,6 +75,28 @@ int main ( void )
 		std::cout << "\"std::cout << sp.longestSpan() << std::endl;\"" << std::endl;
 		std::cout << "v" << std::endl;
 		std::cout << sp.longestSpan() << std::endl;
+
+		std::cout << std::endl;
+		std::cout << "[ ~~~~~ COPY CONSTRUCTION ~~~~~ ]\n" << std::endl;
+
+		std::cout << "Span cpy = Span(sp);" << std::endl;
+		Span cpy = Span(sp);
+
+		std::cout << std::endl;
+		std::cout << "\"cpy.showSpan();\"" << std::endl;
+		std::cout << "v" << std::endl;
+
+		cpy.showSpan();
+
+		std::cout << std::endl;
+		std::cout << "\"std::cout << cpy.shortestSpan() << std::endl;\"" << std::endl;
+		std::cout << "v" << std::endl;
+		std::cout << cpy.shortestSpan() << std::endl;
+
+		std::cout << std::endl;
+		std::cout << "\"std::cout << cpy.longestSpan() << std::endl;\"" << std::endl;
+		std::cout << "v" << std::endl;
+		std::cout << cpy.longestSpan() << std::endl;
 	}
 
 	std::cout << std::endl;
@@ -80,7 +108,6 @@ int main ( void )
 
 		std::cout << std::endl;
 		std::cout << "\"sp.randFill();\"" << std::endl;
-		std::cout << std::endl;
 
 		sp.randFill();
 
@@ -104,7 +131,6 @@ int main ( void )
 
 		std::cout << std::endl;
 		std::cout << "\"sp.randFill();\"" << std::endl;
-		std::cout << std::endl;
 
 		sp.randFill();
 
@@ -128,7 +154,6 @@ int main ( void )
 
 		std::cout << std::endl;
 		std::cout << "\"sp.randFill();\"" << std::endl;
-		std::cout << std::endl;
 
 		sp.randFill();
 
@@ -152,7 +177,6 @@ int main ( void )
 
 		std::cout << std::endl;
 		std::cout << "\"sp.randFill();\"" << std::endl;
-		std::cout << std::endl;
 
 		sp.randFill();
 
@@ -176,7 +200,6 @@ int main ( void )
 
 		std::cout << std::endl;
 		std::cout << "\"sp.randFill();\"" << std::endl;
-		std::cout << std::endl;
 
 		sp.randFill();
 
